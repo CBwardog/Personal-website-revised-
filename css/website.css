@@ -6,12 +6,12 @@
 /*calling custom font*/
 @font-face {
     font-family: work-sans-x-bold;
-    src: url(../fonts/WorkSans-ExtraBold.woff);
+    src: url(./fonts/WorkSans-ExtraBold.woff);
 }
 
 @font-face {
     font-family: work-sans-bold;
-    src: url(../fonts/WorkSans-Bold.woff);
+    src: url(./fonts/WorkSans-Bold.woff);
 }
 
 /*vh sets viewport height so it fits with different screen sizes as well as the bodys font*/
