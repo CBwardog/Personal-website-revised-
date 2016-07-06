@@ -3,14 +3,7 @@
 	box-sizing: border-box;
 }
 
-/*calling custom font*/
-@font-face {
- font-family: 'Work Sans', sans-serif;
-}
 
-@font-face {
-    font-family: work-sans-bold;
-}
 
 /*vh sets viewport height so it fits with different screen sizes as well as the bodys font*/
 body {
