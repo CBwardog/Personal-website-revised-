@@ -1,0 +1,574 @@
+/* box sizing tells browser width and height to include*/
+* {
+	box-sizing: border-box;
+}
+
+/*calling custom font*/
+
+/*vh sets viewport height so it fits with different screen sizes as well as the bodys font*/
+body {
+	font-family: 'Work Sans', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	background-image:url("images/backdrop.jpg");	
+	text-transform: uppercase;	
+	background-attachment: fixed;
+	background-size:100vw 100vh;
+
+
+}
+
+/* sets all unordered lists to remove bullets margins etc*/
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* changes the color of My name. removes bullets from list*/
+
+a {
+	color: white;
+	text-decoration: none;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+
+/* my name em signifies changes with screen size*/
+.logo {
+	margin: 0;
+	font-size: 2em;
+}
+
+/*main navs top margin so it pushes away from top of page*/
+.main-nav {
+	margin-top: 5px;
+
+}
+/*text transformation of name and menu*/
+.logo a,.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+/* font color and size of main navagation*/
+.main-nav a {
+	color: white;
+	font-size: .99em;
+}
+
+/* color when user hovers over main navigation*/
+.main-nav a:hover {
+	color: #718daa;
+}
+
+
+/* em allows the size fonts and other things to be proportianate to the screensize*/
+header {
+	z-index:3;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #989898;
+	background-color: #56C5FF;
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,1);
+	border-radius: 5px;
+	position:fixed;
+	width:100%;
+	height:auto;
+}
+
+
+/*Media Queries */
+
+/* when the browser goes above this width*/
+@media (min-width: 768px){
+	#icon{
+		display:none;		
+	}	
+		
+}
+
+
+/*when browser goes below this width*/
+@media (max-width: 768px){
+	.main_icons {
+		display: none;	
+	}
+
+
+	header:hover .main_icons {
+	display: block;
+	}
+	header:hover #icon{
+	display: none;		
+	}
+	section{
+	padding-top:140px;
+		-webkit-box-orient:vertical;
+		-webkit-box-direction:normal;
+		    -ms-flex-direction:column;
+		        flex-direction:column;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	height:auto;
+	 -webkit-box-pack: start;
+	     -ms-flex-pack: start;
+	         justify-content: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+                -ms-grid-row-align: flex-start;
+            align-items: flex-start;
+	}
+	
+/*********************/
+
+	
+
+	
+
+	
+}
+
+
+/*when browser goes below this width*/
+@media (min-width: 769px) {
+	header, .main-nav {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	header {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		            -ms-grid-row-align: center;
+		        align-items: center;
+    
+	}
+	section{
+	padding-top:140px;
+		-webkit-box-orient:horizontal;
+		-webkit-box-direction:normal;
+		    -ms-flex-direction:row;
+		        flex-direction:row;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	height:auto;
+	 -webkit-box-pack: start;
+	     -ms-flex-pack: start;
+	         justify-content: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+                -ms-grid-row-align: flex-start;
+            align-items: flex-start;
+	}
+	
+}	
+
+
+/*when browser goes below this width*/
+@media (min-width: 1025px) {
+	header {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+	}
+	section{
+	padding-top:90px;
+	
+	
+	-webkit-box-orient:horizontal;
+	
+	
+	-webkit-box-direction:normal;
+	
+	
+	    -ms-flex-direction:row;
+	
+	
+	        flex-direction:row;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	height:auto;
+	 -webkit-box-pack: start;
+	     -ms-flex-pack: start;
+	         justify-content: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+                -ms-grid-row-align: flex-start;
+            align-items: flex-start;
+	}
+
+}
+
+
+/*sections*/
+
+section{
+
+	display: block;
+
+	-webkit-perspective:2000px;
+
+	        perspective:2000px;
+	padding-bottom:31px;
+}
+
+
+/*articles*/
+
+article:nth-child(1) {
+
+
+    -webkit-box-ordinal-group: 2;
+
+
+        -ms-flex-order: 1;
+
+
+            order: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+
+    -ms-flex-item-align: auto;
+
+        align-self: auto;
+
+    }
+
+article:nth-child(2) {
+
+
+    -webkit-box-ordinal-group: 3;
+
+
+        -ms-flex-order: 2;
+
+
+            order: 2;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    -ms-flex-item-align: auto;
+        align-self: auto;
+
+    }
+
+article:nth-child(3) {
+
+    -webkit-box-ordinal-group: 4;
+
+        -ms-flex-order: 3;
+
+            order: 3;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    -ms-flex-item-align: auto;
+        align-self: auto;
+	-webkit-perspective:800px;
+	        perspective:800px;	
+    }
+  
+article:nth-child(4) {
+
+    -webkit-box-ordinal-group: 5;
+
+        -ms-flex-order: 4;
+
+            order: 4;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    -ms-flex-item-align: auto;
+        align-self: auto;
+
+    }  
+ 
+article:nth-child(5) {
+
+    -webkit-box-ordinal-group: 6;
+
+        -ms-flex-order: 5;
+
+            order: 5;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 2 50%;
+            flex: 0 2 50%;
+    -ms-flex-item-align: auto;
+        align-self: auto;
+
+    }
+	
+
+
+	
+/*3d transforms */
+		
+	
+#container_2 {
+  position: relative;
+	width: 100vw;
+	height:70vh;
+	border: 5px solid #56C5FF;
+
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,1);
+	border-radius: 5px;
+	text-align:center;
+
+	cursor:pointer;
+
+}
+
+#about_card {
+	width: 100%;
+	height:100%;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	-webkit-transition: all .7s linear;
+	transition: all .7s linear;
+    background-image:url("images/IT.jpg");	
+	
+}
+
+img {
+	height: 20vh;
+	width: 10vw;
+	
+}
+
+#container_2:hover #about_card  {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,1);
+	
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,1);
+	font-size: 1.5vw;	
+
+
+	
+}
+.face {
+	position: absolute;
+	width: 100%;
+	height:auto;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	color: white;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.face.front {
+	font-size: 4vw;	
+text-align:center;	
+	max-width:100%;
+margin-top:25vh;	
+
+}
+
+.back {
+  display: block;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  box-sizing: border-box;
+
+  color: white;
+  	max-width:100%;
+	border-radius: 5px;
+
+	overflow: auto;
+	text-align:center;
+
+  }	
+
+
+#skills_card {
+	width: 100%;
+	height:100%;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	-webkit-transition: all .7s linear;
+	transition: all .7s linear;
+    background-image:url("images/skills.jpg");	
+	background-size: 50%;
+
+
+
+}
+
+
+#container_2:hover #skills_card  {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,1);
+		font-size: 2vw;	
+
+
+	
+	
+}
+	
+#portfolio_card {
+	width: 100%;
+	height:100%;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	-webkit-transition: all .7s linear;
+	transition: all .7s linear;
+    background-image:url("images/portfolio.jpg");	
+	background-size:50%;
+
+
+}
+
+#container_2:hover #portfolio_card  {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,1);	
+		font-size: 2vw;	
+}	
+	
+#interests_card {
+	width: 100%;
+	height:100%;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	-webkit-transition: all .7s linear;
+	transition: all .7s linear;
+    background-image:url("images/interests.jpg");
+	background-size:50%;
+	/*background-repeat:no-repeat;*/
+
+}
+
+#container_2:hover #interests_card  {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,1);	
+		font-size: 2vw;	
+}	
+	
+
+#contact_card {
+	width: 100%;
+	height:100%;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	-webkit-transition: all .7s linear;
+	transition: all .7s linear;
+    background-image:url("images/contact.jpg");	
+	background-size:50%
+
+}
+
+#container_2:hover #contact_card  {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,1);	
+		font-size: 2vw;	
+}	
+	
+
+	
+	
+	
+	
+ /*footer preferences*/
+    
+.footer-nav a{
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+
+} 
+
+.footer-nav {
+		display:-webkit-box;
+		display:-ms-flexbox;
+		display:flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		width: 100%;
+		margin: 0 auto;
+		
+}
+		
+footer {
+
+	position: fixed;
+	bottom:0;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #989898;
+	background-color: #56C5FF;
+	border-radius: 5px;
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-orient:horizontal;
+	-webkit-box-direction:normal;
+	    -ms-flex-direction:row;
+	        flex-direction:row;
+	width: 100%;
+}
+
+.footer_icons{
+	color:white;
+	font-size: .53em;	
+}
+
+/* color when user hovers over footer navigation*/
+.footer-nav a:hover {
+	color: #718daa;
+}
+
+
+
+/* Modal*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
